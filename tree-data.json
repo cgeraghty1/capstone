@@ -1,0 +1,19 @@
+{
+    "name": "Francis Galton",
+    "children": [
+      {
+        "name": "Karl Pearson",
+        "children": [
+          {
+            "name": "Ronald Fisher",
+            "children": [
+              {
+                "name": "Modern Statistical Methods"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

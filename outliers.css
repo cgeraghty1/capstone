@@ -1,0 +1,78 @@
+/* General body styling */
+body {
+    font-family: 'Avenir', sans-serif;
+    color: rgba(0, 31, 63, 0.8);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: rgba(0, 31, 63, 0.9);
+    margin: 20px 0;
+}
+
+/* Description Section */
+#outliers-description {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+#outliers-description p {
+    font-size: 1em;
+    color: rgba(0, 31, 63, 0.85);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Tableau Embed Section */
+#tableau-outliers {
+    text-align: center;        /* Centers the Tableau container */
+    margin-top: 30px;
+    display: flex;             /* Use flexbox for centering */
+    justify-content: center;   /* Horizontally centers the visualization */
+}
+
+#tableau-outliers .tableauViz {
+    width: 100%;
+    height: 800px;
+    max-width: 1200px;         /* Set a max-width to prevent it from being too large */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    color: rgba(0, 31, 63, 0.8);
+    font-size: 0.9em;
+}
+/* Family Story Section */
+#family-story {
+    max-width: 800px;          /* Limit the width like the sections above */
+    margin: 0 auto;            /* Center the content */
+    padding: 20px;             /* Add padding for readability */
+    text-align: justify;       /* Keep text justified */
+}
+
+#family-story p {
+    font-size: 1em;
+    color: rgba(0, 31, 63, 0.85);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+footer p {
+    margin: 0;
+}

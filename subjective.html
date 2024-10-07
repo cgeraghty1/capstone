@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjective Variables in Social Science</title>
+    <link rel="stylesheet" href="subjective.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Subjective Variables in Social Science</h1>
+            <p class="subtitle">Tracking the Evolution of Variable Importance Over Time</p>
+        </div>
+    </header>
+
+    <section id="introduction">
+        <p>
+            This visualization explores how the focus on certain variables, such as race, intelligence, GDP, and social support, 
+            has evolved over time in social science research. By mapping this progression, we can trace how academia has shifted 
+            from categorizing individuals based on perceived biological and social value to more holistic and inclusive measures of well-being.
+        </p>
+    </section>
+
+    <!-- Line Graph Visualization -->
+    <section id="line-graph">
+        <h2>The Evolution of Variable Importance in Social Science Research</h2>
+        <div id="graph-container"></div>
+    </section>
+
+    <section id="analysis">
+        <p>
+            The shift in the importance of various factors over time reflects broader societal changes and evolving academic priorities. In the early 20th century, variables such as race and intelligence were emphasized, reflecting the prevalent eugenic thinking and social hierarchies of the era. Over time, economic metrics like GDP per capita and, more recently, social support have risen in prominence as markers of societal well-being. 
+        </p>
+        <p>
+            While these shifts might suggest a more inclusive and holistic approach to measuring human flourishing, the persistent influence of elite academic institutions on these frameworks must not be overlooked. The intellectual legacies of figures like Galton, Pearson, and Fisher—pioneers from prestigious universities—continue to echo in the modern weighting of variables in social science research. Though the specific variables may have changed, the role of elite academia in shaping what is valued and how human experiences are quantified remains a constant. In effect, academia itself still wields significant influence over how societies are categorized and assessed.
+        </p>
+        <p>
+            This ongoing influence raises critical questions: To what extent does academic prestige shape the perceived validity of certain variables? And how does this elite control over social science research perpetuate certain hierarchies, even when well-being and inclusivity are the professed goals? The line graph above not only traces the historical prioritization of these variables but also serves as a reminder that those determining the weight of these variables are often embedded within the very institutions that have long upheld systems of privilege and hierarchy.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Colin Geraghty. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Set the dimensions of the graph
+        var margin = {top: 50, right: 20, bottom: 50, left: 60},
+            width = 900 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom;
+
+        // Append the svg object to the #graph-container
+        var svg = d3.select("#graph-container").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        // Sample data: variable importance over time
+        var data = [
+            {year: 1920, race: 60, intelligence: 40, gdp: 20, social_support: 5},
+            {year: 1940, race: 45, intelligence: 50, gdp: 30, social_support: 10},
+            {year: 1960, race: 30, intelligence: 60, gdp: 40, social_support: 15},
+            {year: 1980, race: 20, intelligence: 45, gdp: 50, social_support: 30},
+            {year: 2000, race: 15, intelligence: 30, gdp: 60, social_support: 45},
+            {year: 2020, race: 5, intelligence: 20, gdp: 50, social_support: 60}
+        ];
+
+        var variables = ["race", "intelligence", "gdp", "social_support"];
+
+        // Define the scales
+        var x = d3.scaleLinear().domain([1920, 2020]).range([0, width]);
+        var y = d3.scaleLinear().domain([0, 100]).range([height, 0]);
+
+        // Define the line generator
+        var line = d3.line()
+            .x(function(d) { return x(d.year); })
+            .y(function(d, i) { return y(d.value); })
+            .curve(d3.curveMonotoneX); // Smooth curve
+
+        // Color scale for each variable
+        var color = d3.scaleOrdinal()
+            .domain(variables)
+            .range(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"]);
+
+        // Create lines for each variable
+        variables.forEach(function(variable) {
+            var varData = data.map(function(d) {
+                return {year: d.year, value: d[variable]};
+            });
+
+            svg.append("path")
+                .datum(varData)
+                .attr("fill", "none")
+                .attr("stroke", color(variable))
+                .attr("stroke-width", 2)
+                .attr("class", "line")
+                .attr("d", line);
+        });
+
+        // Add X axis
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x).tickFormat(d3.format("d")))
+            .attr("class", "axis");
+
+        // Add Y axis
+        svg.append("g")
+            .call(d3.axisLeft(y))
+            .attr("class", "axis");
+
+        // Add a legend
+        var legend = svg.selectAll(".legend")
+            .data(variables)
+            .enter().append("g")
+            .attr("class", "legend")
+            .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+        legend.append("rect")
+            .attr("x", width - 18)
+            .attr("width", 18)
+            .attr("height", 18)
+            .style("fill", color);
+
+        legend.append("text")
+            .attr("x", width - 24)
+            .attr("y", 9)
+            .attr("dy", ".35em")
+            .style("text-anchor", "end")
+            .text(function(d) { return d; });
+    </script>
+</body>
+</html>

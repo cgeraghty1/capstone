@@ -1,0 +1,47 @@
+/* General page layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    background-color: rgba(0, 31, 63, 0.9); /* Soft navy */
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+#conclusion {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 900px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: rgba(0, 31, 63, 0.8); /* Soft navy */
+    padding: 20px;
+}
+
+#conclusion p {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #001f3f;
+    color: white;
+    margin-top: 40px;
+}

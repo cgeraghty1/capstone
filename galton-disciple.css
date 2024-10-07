@@ -1,0 +1,67 @@
+/* General body styling */
+body {
+    font-family: 'Avenir', sans-serif;
+    color: rgba(0, 31, 63, 0.85); /* Matches previous style */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: rgba(0, 31, 63, 0.9);
+    margin: 20px 0;
+}
+
+/* Section Styling */
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+section h2 {
+    font-size: 1.8em;
+    color: rgba(0, 31, 63, 0.85);
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1.1em;
+    color: rgba(0, 31, 63, 0.85);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* PDF Embed Section */
+.pdf-container {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.pdf-container object {
+    width: 100%;
+    max-width: 600px; /* Ensure responsive width */
+    height: 400px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    color: rgba(0, 31, 63, 0.8);
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}

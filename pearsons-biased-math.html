@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Implications of Grouping Populations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pearson's Math and Real-World Implications</h1>
+        <p>Visualizing the ethical implications of grouping populations based on arbitrary metrics.</p>
+    </header>
+
+    <section id="histogram-section">
+        <h2>Interactive Histogram: Grouping Populations</h2>
+        <p>Adjust the bias sliders to see how grouping populations based on arbitrary metrics influences data interpretation.</p>
+
+        <div id="sliders">
+            <label for="race-bias">Race Bias:</label>
+            <input type="range" id="race-bias" name="race-bias" min="0" max="100" value="0">
+            <span id="race-bias-value">0</span>
+
+            <label for="class-bias">Class Bias:</label>
+            <input type="range" id="class-bias" name="class-bias" min="0" max="100" value="0">
+            <span id="class-bias-value">0</span>
+
+            <label for="gender-bias">Gender Bias:</label>
+            <input type="range" id="gender-bias" name="gender-bias" min="0" max="100" value="0">
+            <span id="gender-bias-value">0</span>
+        </div>
+
+        <div id="histogram"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

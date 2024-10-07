@@ -1,0 +1,61 @@
+/* General text styling */
+body {
+    font-family: 'Avenir', sans-serif;
+    color: rgba(0, 31, 63, 0.8);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: rgba(0, 31, 63, 0.9);
+    font-size: 2em;
+    margin-top: 40px;
+}
+
+p {
+    font-size: 1em;
+    color: rgba(0, 31, 63, 0.85);
+    margin-bottom: 15px;
+}
+
+/* Content wrapper to center and limit text width */
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tableau visualization container */
+.tableau-container {
+    display: flex;
+    justify-content: center; /* Ensures the container centers its content */
+    align-items: center;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Make the Tableau placeholder centered and fill more space */
+.tableauPlaceholder {
+    width: 100%; /* Ensure it takes up the full width of the container */
+    max-width: 1200px; /* Set a max width to prevent it from being too wide */
+    height: 900px; /* Increased height for a larger visualization */
+    display: flex;
+    justify-content: center; /* Ensure content inside the placeholder is centered */
+}
+
+/* Ensure the Tableau visualization object takes the full width */
+.tableauViz {
+    width: 100%; /* Make the object take full width */
+    height: 100%; /* Full height as well */
+}
+/* Paragraph styling for after-visualization section */
+#after-visualization p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: rgba(0, 31, 63, 0.85);
+    margin-bottom: 20px;
+}
+

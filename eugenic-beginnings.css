@@ -1,0 +1,94 @@
+/* General text styling */
+body {
+    font-family: 'Avenir', sans-serif;
+    color: rgba(0, 31, 63, 0.8);
+}
+
+/* Subtitle styling */
+.subtitle {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: rgba(0, 31, 63, 0.85);
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: rgba(0, 31, 63, 0.8);
+    margin-bottom: 30px;
+}
+
+/* Section headings */
+h2 {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: rgba(0, 31, 63, 0.9);
+    margin-bottom: 20px;
+}
+
+/* Eugenics Tree - Center the image and add text below */
+.image-centered {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.eugenics-tree-image {
+    width: 70%; /* Change the size here */
+    max-width: 700px; /* You can adjust this value */
+    height: auto;
+    border: 1px solid #001f3f;
+    border-radius: 5px;
+}
+
+/* Text below the image */
+.text-below-image {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Kantsaywhere Image Section */
+.image-and-text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.kantsaywhere-image {
+    width: 80%; /* Adjust size as needed */
+    height: auto;
+    border: 2px solid #001f3f;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+/* Data Visualization Images */
+.image-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.data-visualization-image {
+    width: 80%; /* Adjust size */
+    max-width: 500px;
+    height: auto;
+    border: 2px solid #001f3f;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    color: rgba(0, 31, 63, 0.8);
+}
+
+footer a {
+    color: #001f3f;
+    text-decoration: none;
+    font-weight: bold;
+}
+

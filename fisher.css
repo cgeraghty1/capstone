@@ -1,0 +1,80 @@
+/* General body styling */
+body {
+    font-family: 'Avenir', sans-serif;
+    color: rgba(0, 31, 63, 0.85);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: rgba(0, 31, 63, 0.9);
+    margin: 20px 0;
+}
+
+.subtitle {
+    font-size: 1.3em;
+    color: rgba(0, 31, 63, 0.85);
+    margin-bottom: 20px;
+}
+
+/* Section Styling */
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+section h2 {
+    font-size: 1.8em;
+    color: rgba(0, 31, 63, 0.85);
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1.1em;
+    color: rgba(0, 31, 63, 0.85);
+    margin-bottom: 20px;
+}
+
+/* Styling for blockquote */
+blockquote {
+    font-size: 1.2em;
+    font-style: italic;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-left: 4px solid #001f3f;
+    color: rgba(0, 31, 63, 0.85);
+}
+
+/* Bar chart images */
+.data-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border: 2px solid #001f3f;
+    border-radius: 5px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    color: rgba(0, 31, 63, 0.8);
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}

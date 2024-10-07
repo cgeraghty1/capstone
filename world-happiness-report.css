@@ -1,0 +1,30 @@
+/* Styles for World Happiness Report Page */
+
+#introduction {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: rgba(0, 31, 63, 0.8); /* Soft navy for text */
+}
+
+.tableau-container {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.tableau-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: rgba(0, 31, 63, 0.9); /* Soft navy */
+}
+
+iframe {
+    border: 2px solid #001f3f; /* Navy border for the Tableau visualizations */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+

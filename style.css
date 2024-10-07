@@ -1,0 +1,363 @@
+/* General Styles for Main Page */
+body {
+    font-family: 'Avenir', sans-serif;
+    background-color: #fff;
+    color: #001f3f;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.5em;
+}
+
+#introduction {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.image-and-lines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.galton-image {
+    width: 400px;
+    height: auto;
+    margin-right: 50px;
+}
+
+.horizontal-lines {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+}
+
+.line-item {
+    position: relative;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.line-item:hover {
+    transform: translateX(10px);
+}
+
+.line-item a {
+    text-decoration: none;
+    color: #001f3f;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Styles for Beauty Map and Kantsaywhere Page */
+#beauty-map-kantsaywhere {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px auto;
+    padding: 15px;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #001f3f;
+    border-radius: 8px;
+}
+
+.image-container p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Styles for Galton's Foresight in Data Visualization Page */
+#data-visualization-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#data-visualization-page h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.data-vis-image-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.data-vis-image-container img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #001f3f;
+    border-radius: 8px;
+}
+
+.data-vis-description {
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Styles for Scatterplots and the Magnetic Pull of the Regression Line Page */
+#scatterplot-description {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Tableau Embed Section */
+#tableau-embed {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#tableau-embed .tableauViz {
+    width: 100%;
+    height: 600px;
+}
+
+#outliers-description {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Tableau Embed Section */
+#tableau-outliers {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#tableau-outliers .tableauViz {
+    width: 100%;
+    height: 800px;
+}
+
+#family-72-text {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    line-height: 1.6;
+    font-size: 1.2em;
+}
+
+#family-72-text p {
+    margin-bottom: 20px;
+}
+
+/* Styles for Galton's Disciple Page */
+#pearson-intro {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    line-height: 1.6;
+    font-size: 1.2em;
+}
+
+/* Radar Chart Section */
+#radar-chart-section {
+    text-align: center;
+    margin: 40px auto;
+}
+
+#radar-chart-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.radar-chart-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #001f3f;
+    border-radius: 8px;
+}
+
+/* Radar Chart Description Section */
+#radar-chart-description {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    line-height: 1.6;
+    font-size: 1.2em;
+}
+/* Styles for Pearson's Math and Real-World Implications Page */
+#histogram-section {
+    text-align: center;
+    margin: 40px;
+}
+
+#sliders {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#sliders label {
+    margin-right: 10px;
+}
+
+input[type="range"] {
+    margin-right: 10px;
+}
+
+#histogram {
+    width: 100%;
+    height: 500px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #001f3f;
+    color: #fff;
+}
+/* Styles for Who Makes These Subjective Judgments Page */
+#timeline-chart, #bar-chart {
+    margin-bottom: 40px;
+}
+
+#plotly-timeline, #plotly-bar {
+    width: 100%;
+    height: 500px;
+}
+
+/* Bias sliders */
+#sliders {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#sliders label {
+    margin-right: 10px;
+}
+
+#sliders input[type="range"] {
+    margin-right: 10px;
+}
+
+#histogram {
+    width: 100%;
+    height: 500px;
+}
+
+/* Styles for Eugenic Beginnings Page */
+#tree-visualization {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+svg {
+    background-color: #f4f4f4; /* Light gray background for the visualization */
+    border: 2px solid #001f3f; /* Add a border to the SVG */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow to the tree visualization */
+}
+
+/* Style for the links between nodes */
+.link {
+    stroke: #001f3f; /* Dark blue color for links */
+    stroke-width: 2px;
+}
+
+/* Style for the nodes (circles) */
+.node {
+    fill: #28a745; /* Green color for nodes */
+    stroke: #001f3f; /* Add an outline around the circles */
+    stroke-width: 1.5px;
+}
+
+/* Style for the labels of the nodes */
+.label {
+    font-family: 'Avenir', sans-serif; /* Use Avenir font */
+    font-size: 14px;
+    fill: #001f3f; /* Dark blue for the text labels */
+}
+/* Genealogical Tree Styles */
+#tree-visualization {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.link {
+    stroke: #001f3f;
+    stroke-width: 2px;
+}
+
+.node {
+    fill: #28a745;
+    stroke: #001f3f;
+    stroke-width: 2px;
+}
+
+.label {
+    font-family: 'Avenir', sans-serif;
+    font-size: 14px;
+    fill: #001f3f;
+}
+/* Tooltip Styles */
+.tooltip {
+    font-family: 'Avenir', sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #f4f4f4;
+    border: 1px solid #001f3f;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    visibility: hidden;
+    z-index: 10;
+}
+
+

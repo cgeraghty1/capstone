@@ -1,0 +1,58 @@
+/* General body styling */
+body {
+    font-family: 'Avenir', sans-serif;
+    color: rgba(0, 31, 63, 0.85);  /* Existing text color */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: rgba(0, 31, 63, 0.9);
+    margin: 20px 0;
+}
+
+/* Section Styling */
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+section p {
+    font-size: 1em;
+    color: rgba(0, 31, 63, 0.85);  /* Opening and closing paragraphs */
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Fictional story specific color (Burgundy example) */
+#fictional-story em {
+    font-style: italic;
+    color: #8B0000;  /* Burgundy for fictional story */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    color: rgba(0, 31, 63, 0.8);
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+

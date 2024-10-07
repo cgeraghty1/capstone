@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Happiness Report: EU Case Study</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>World Happiness Report</h1>
+        <p class="subtitle">EU Case Study: The Influence of Weights on Happiness Rankings</p>
+    </header>
+
+    <section id="introduction">
+        <p>
+            The <i>2023 World Happiness Report</i> (WHR) employs a complex statistical model to rank national happiness based on weighted variables such as GDP per capita, social support, and life expectancy. Central to the WHR’s analysis is the **pooled Ordinary Least Squares (OLS) regression**, which blends these factors to measure happiness through the Cantril Ladder (Happiness Score). This method is heavily influenced by the statistical techniques pioneered by Francis Galton, Karl Pearson, and Ronald Fisher—who initially used statistical analysis to classify human populations.
+        </p>
+        <p>
+            In the EU context, social support is assigned **45.96%** weight, freedom to make life choices **24.22%**, and GDP per capita **6.53%**. Healthy life expectancy at birth holds a mere **0.49%** weight, while perceptions of corruption and generosity are weighted at **13.03%** and **9.77%**, respectively. The WHR emphasizes social factors over economic ones, suggesting that supportive relationships matter more than financial stability when determining collective happiness.
+        </p>
+        <p>
+            However, the WHR relies on a singular, binary question to gauge 'social support': <i>'If you were in trouble, do you have relatives or friends you can count on to help you whenever you need them, or not?'</i> This narrow approach presupposes that the presence of social support is a decisive factor in happiness, without directly assessing the emotional well-being of individuals in distress. By focusing on the availability of support networks, the WHR overlooks the deep emotional complexity and despair that can lead individuals to consider suicide—arguably the most definitive indicator of unhappiness.
+        </p>
+        <p>
+            Despite its efforts to downplay the connection between high happiness rankings and increased suicide rates in Nordic countries, the WHR admits that Finland’s suicide rates are comparable to those of France and Germany. Finland’s rate stands at **15.3 per 100,000 people**, while France’s is **13.8** and Germany’s is **12.3**—both aligning with the European average. The WHR’s attempt to minimize the significance of these individual tragedies, framing them as outliers within a broader context of happiness, raises critical questions about how we quantify well-being. This justification demands deeper examination within the broader discourse on societal health and happiness.
+        </p>
+    </section>
+
+    <!-- Tableau Visualizations Section -->
+    <section id="tableau-visualizations">
+        <div class="tableau-container">
+            <h2> EU Happiness Scores</h2>
+            <div id="tableauViz1"></div> <!-- This is where the first Tableau viz will go -->
+        </div>
+    </section>
+
+    <section id="suicide-analysis">
+        <h2>Re-examining Happiness: A Single, Objective Variable</h2>
+        <p>
+            While the WHR relies on subjective, weighted variables, such as social support, to define happiness, what happens when we use one solid, objective measure of well-being? Here, we turn to suicide rates—a grim but profoundly real measure of human despair. Unlike the WHR’s subjective variables, suicide rates per 100,000 people across EU countries offer a stark, unfiltered view of unhappiness.
+        </p>
+        <p>
+            Recent data shows that Finland has a suicide rate of **15.3 per 100,000 people**, compared to **13.8** in France and **12.3** in Germany. These differences, while numerically small, represent profound human costs. When viewed through the lens of statistical analysis, these lives risk becoming overshadowed as mere data points. This statistical reductionism—transforming personal tragedies into aggregated numbers—echoes the practices of Francis Galton, who first used statistics to classify populations and normalize outliers. The individuality of those who deviate from the mean, including those who take their own lives, is lost within the collective.
+        </p>
+        <p>
+            By focusing on one objective variable—suicide rates—a vastly different picture of happiness emerges. Countries with sunnier, southern climates, such as Cyprus and Greece, exhibit significantly lower suicide rates. This suggests that environmental factors, such as sunlight, may play a larger role in determining happiness than the WHR’s current model accounts for. As you explore the visualization below, consider whether this simple, objective measure might offer a more compelling narrative of well-being than the WHR’s subjective, complex model.
+        </p>
+    </section>
+
+    <!-- Tableau Visualizations Section for Suicide Rates -->
+    <section id="tableau-visualizations">
+        <div class="tableau-container">
+            <h2> EU Suicide Rates</h2>
+            <div id="tableauViz2"></div> <!-- This is where the second Tableau viz will go -->
+        </div>
+    </section>
+
+    <section id="conclusion">
+        <h2>Contrasting Perspectives on Measuring Happiness</h2>
+        <p>
+            The WHR’s reliance on subjective variables, such as social support, while overlooking more tangible indicators like suicide rates, raises important questions about how we measure well-being. Social support, weighted at nearly **46%**, is based on a singular, binary question, “Do you have someone to turn to in times of trouble?” This approach ignores the deep emotional complexity of individuals facing despair. The reduction of human experiences to binary responses risks obscuring the realities of unhappiness that lead people to suicide.
+        </p>
+        <p>
+            On the other hand, using suicide rates—arguably the most objective measure of unhappiness—creates an entirely different ranking of EU countries. While the WHR consistently ranks Nordic countries like Finland, Denmark, and Sweden as the happiest, these same nations exhibit relatively high suicide rates. By contrast, southern European countries such as Cyprus, Greece, and Italy rank lower on the WHR’s scale but show lower suicide rates, suggesting a different, perhaps more authentic measure of well-being.
+        </p>
+        <p>
+            This stark contrast highlights the limitations of relying on complex, subjective models to capture the nuances of human happiness. The WHR’s multi-variable model might obscure the profound unhappiness reflected in objective data like suicide rates. The lesson here is clear: our understanding of happiness is deeply influenced by the variables we choose to measure, and when we focus solely on subjective factors like social support, we risk overlooking the real, painful truths that data like suicide rates reveal.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Colin Geraghty. All rights reserved.</p>
+    </footer>
+
+    <script>
+    // EU Overall Happiness Scores
+    var viz1, viz2;
+    var containerDiv1 = document.getElementById("tableauViz1"),
+        url1 = "https://public.tableau.com/views/EUHasitis/Dashboard2"; // Your actual Tableau Public link
+    
+    var options1 = {
+        hideTabs: true,
+        width: "100%",
+        height: "600px",
+        onFirstInteractive: function () {
+            console.log("Viz 1 loaded successfully.");
+        }
+    };
+    
+    viz1 = new tableau.Viz(containerDiv1, url1, options1); // Creates the Tableau Viz in the specified container
+    
+    //  EU Suicide Rates 
+    var containerDiv2 = document.getElementById("tableauViz2"),
+        url2 = "https://public.tableau.com/views/EUS_17272910513640/Dashboard3"; // Your actual Tableau Public link
+    
+    var options2 = {
+        hideTabs: true,
+        width: "100%",
+        height: "600px",
+        onFirstInteractive: function () {
+            console.log("Viz 2 loaded successfully.");
+        }
+    };
+    
+    viz2 = new tableau.Viz(containerDiv2, url2, options2); // Creates the Tableau Viz in the specified container
+    </script>
+
+</body>
+</html>
