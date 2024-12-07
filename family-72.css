@@ -1,58 +1,67 @@
 /* General body styling */
 body {
     font-family: 'Avenir', sans-serif;
-    color: rgba(0, 31, 63, 0.85);  /* Existing text color */
+    color: rgba(0, 31, 63, 0.85);
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    font-size: 17px;
 }
 
-/* Header Styling */
 header {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px 20px 20px; /* Controls the spacing inside the header */
+    color: #001f3f; /* Header text color */
+    background-color: transparent; /* Header background color */
 }
 
 h1 {
-    font-size: 2.5em;
-    color: rgba(0, 31, 63, 0.9);
-    margin: 20px 0;
+    font-size: 2.5em; /* Header font size */
+    margin: 0; /* Controls spacing outside the header */
+    font-weight: 400; /* Header font weight (thickness) */
 }
 
-/* Section Styling */
-section {
-    max-width: 800px;
+
+/* Content Wrapper */
+.content-wrapper {
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     text-align: justify;
 }
 
-section p {
-    font-size: 1em;
-    color: rgba(0, 31, 63, 0.85);  /* Opening and closing paragraphs */
-    margin-bottom: 20px;
-    line-height: 1.6;
+p {
+    margin: 0 0 15px 0; /* Controls spacing between paragraphs */
+    padding: 0; /* Removes padding inside the paragraph */
+    line-height: 1.8; /* Controls the vertical spacing between lines of text */
+    font-size: 17px; /* Font size for paragraph text */
+    color: rgba(0, 31, 63, 0.85); /* Text color */
 }
 
-/* Fictional story specific color (Burgundy example) */
+
+/* Fictional Story Styling */
 #fictional-story em {
     font-style: italic;
-    color: #8B0000;  /* Burgundy for fictional story */
+    color: #8B0000;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 5px solid #8B0000;
+    display: block;
+    margin: 20px 0;
 }
 
 /* Footer Styling */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: #eaeaea;
     color: rgba(0, 31, 63, 0.8);
     font-size: 0.9em;
+    border-top: 1px solid #ccc;
 }
 
 footer p {
     margin: 0;
 }
-
-
 

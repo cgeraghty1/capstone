@@ -1,78 +1,80 @@
-/* General body styling */
+/* General Styles */
 body {
     font-family: 'Avenir', sans-serif;
-    color: rgba(0, 31, 63, 0.8);
+    color: rgba(0, 31, 63, 0.85);
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    font-size: 17px;
 }
 
 /* Header Styling */
 header {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px 20px 20px; /* Controls the spacing inside the header */
+    color: #001f3f; /* Header text color */
+    background-color: transparent; /* Header background color */
 }
 
 h1 {
-    font-size: 2em;
-    color: rgba(0, 31, 63, 0.9);
-    margin: 20px 0;
+    font-size: 2.5em; /* Header font size */
+    margin: 0; /* Controls spacing outside the header */
+    font-weight: 400; /* Header font weight (thickness) */
 }
 
-/* Description Section */
-#outliers-description {
-    max-width: 800px;
+
+/* Content Wrapper */
+.content-wrapper {
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 17px;
+    color: rgba(0, 31, 63, 0.85);
+    margin-bottom: 20px;
     text-align: justify;
 }
 
-#outliers-description p {
-    font-size: 1em;
-    color: rgba(0, 31, 63, 0.85);
-    margin-bottom: 20px;
-    line-height: 1.6;
+/* Highlight important text */
+p strong {
+    color: #1e90ff;
+    font-weight: bold;
 }
 
-/* Tableau Embed Section */
-#tableau-outliers {
-    text-align: center;        /* Centers the Tableau container */
-    margin-top: 30px;
-    display: flex;             /* Use flexbox for centering */
-    justify-content: center;   /* Horizontally centers the visualization */
+/* Tableau Visualization Container */
+.tableau-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#tableau-outliers .tableauViz {
+.tableauPlaceholder {
     width: 100%;
+    max-width: 900px;
     height: 800px;
-    max-width: 1200px;         /* Set a max-width to prevent it from being too large */
+}
+
+.tableauViz {
+    width: 100%;
+    height: 100%;
 }
 
 /* Footer Styling */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: #eaeaea;
     color: rgba(0, 31, 63, 0.8);
     font-size: 0.9em;
-}
-/* Family Story Section */
-#family-story {
-    max-width: 800px;          /* Limit the width like the sections above */
-    margin: 0 auto;            /* Center the content */
-    padding: 20px;             /* Add padding for readability */
-    text-align: justify;       /* Keep text justified */
-}
-
-#family-story p {
-    font-size: 1em;
-    color: rgba(0, 31, 63, 0.85);
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-
-footer p {
-    margin: 0;
+    border-top: 1px solid #ccc;
 }

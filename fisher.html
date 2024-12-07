@@ -2,89 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fisher Doubles Down</title>
     <link rel="stylesheet" href="fisher.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
     <header>
         <h1>Fisher Doubles Down</h1>
         <p class="subtitle">When Statistical Tools Support Prejudiced Beliefs</p>
     </header>
 
-    <section id="introduction">
-        <p>
-            In the aftermath of World War II, the UNESCO Commission's publication <i>"The Race Concept"</i> offered a thorough examination of racial classifications and their far-reaching impacts on society. It notably asserted:
-        </p>
-        <blockquote>
-            "Race hatred and conflict thrive on scientifically false ideas and are nourished by ignorance."
-        </blockquote>
-        <p>
-            Despite this, figures like Ronald Fisher remained committed to using statistical methods, such as ANOVA, to reinforce their views on human differences. Fisher believed that genetic variations among populations had a significant influence on intellectual and emotional capacities. His use of statistical techniques gave his subjective views an appearance of scientific validity.
-        </p>
-    </section>
+    <div class="content-wrapper">
+        <!-- Introduction Section -->
+        <section id="fisher-intro">
+            <p>
+                After World War II, the world declared, “never again.” Racial pseudoscience and the atrocities it justified faced universal condemnation. Yet, categorization itself persisted. Statistical methods advanced, but their application to groups of people continued to legitimize harmful hierarchies.
+            </p>
+            <p>
+                Ronald Fisher, a pioneer of modern statistics, carried the torch of eugenics from Francis Galton and Karl Pearson, both of whom laid the groundwork for applying statistical methods to human populations. Fisher’s contributions to statistics are immense: his work on analysis of variance (ANOVA), maximum likelihood estimation, and the design of experiments revolutionized mathematics, genetics, and scientific research. Yet, Fisher also believed deeply in eugenics, insisting that statistical tools could objectively determine which groups were "fit" to thrive. For Fisher, subjective judgments about "inferior" and "superior" populations became "scientific" through the application of mathematical methods.
+            </p>
+            <p>
+                Rather than abandoning eugenic thinking after the war, Fisher doubled down—arguing that the Earth’s finite resources required humanity to make hard choices. He claimed that statistical tools could help identify which populations contributed to sustainability and which were burdens. This rationalization gave his worldview a veneer of scientific legitimacy, even as it concealed its subjective roots.
+            </p>
+        </section>
 
-    <section id="statistical-methods">
-        <h2>The Role of ANOVA in Reinforcing Bias</h2>
-        <p>
-            Fisher's application of ANOVA (Analysis of Variance) was used to "prove" differences across human populations. However, the results of such analyses are only as unbiased as the data and assumptions behind them. When researchers apply subjective weight to certain variables, the analysis becomes skewed, even if the statistical methods are mathematically valid. 
-        </p>
-        <p>
-            The F-statistic and p-values are often employed to provide a veneer of objectivity to these analyses. The F-statistic, which measures the ratio of variance among groups to variance within groups, and the p-value, which indicates the likelihood that observed results are due to chance, can seem complex and daunting. Many people can be easily bamboozled by these metrics, interpreting them as definitive proof of significant differences between groups, without considering the underlying biases in how the data was collected or how the variables were weighted.
-        </p>
-        <p>
-            Below are two sets of data for five hypothetical countries. The first dataset introduces bias by favoring 'IQ scores' and 'Moral character score' for Country A and Country C, similar to how researchers might unintentionally (or intentionally) give more weight to certain traits they deem valuable. The second dataset is unbiased, with random scores across all variables, representing a more neutral approach.
-        </p>
-    </section>
+        <!-- Eugenicist Visualization -->
+        <section id="ethnic-visualization">
+            <p>
+                Imagine a world where the survival of humanity hinges on resource scarcity. This was Ronald Fisher's rationale in the aftermath of World War II. He argued that statistical tools could determine which populations were most "valuable" to the planet’s sustainability and which were burdens. In his view, this logic demanded difficult decisions—up to and including the elimination of "inferior" populations. Statistical correlations became tools for moral and existential judgments.
+            </p>
+            <p>
+                Step into Fisher’s mindset. Pretend that the fate of the planet depends on your ability to categorize populations. Adjust the weights assigned to variables like IQ, moral character, and crime statistics to explore how hierarchies might emerge. To begin:
+            </p>
+            <ul>
+                <li>
+                    Click on the variable names at the top of the visualization to isolate or include them in the analysis. Consider which variables Fisher might have emphasized and why.
+                </li>
+                <li>
+                    Use the sliders to assign weights to the variables. Higher weights amplify the influence of that variable on the bar chart. Lower weights diminish it.
+                </li>
+                <li>
+                    Observe the results: How do your adjustments affect the ranking of groups? What narratives emerge from the data, and what assumptions do they reflect?
+                </li>
+            </ul>
+            <p>
+                For instance, suppose that, like Fisher, you believed that the white "race" is superior to the black "race." With all the weights set to 1, the white group has a total score of 298.5, which is calculated by adding IQ, moral character, income, reproduction rate, and subtracting crime statistics. The black group, by comparison, scores 266. The scores are relatively close.
+            </p>
+            <p>
+                If you wanted to “prove” the superiority of the white group, you could adjust the weights for moral character and income to 2, amplifying their importance. This would result in a new total score of 446 for the white group and 375.5 for the black group.
+            </p>
+            <p>
+                But suppose, like Fisher, you viewed the higher reproduction rate among black populations as a problem for Earth's sustainability. By assigning a weight of 4 to reproduction rate and subtracting it (along with crime statistics) from the other variables, the scores shift dramatically: the white group would have 220.9, and the black group would fall to 117. This manipulation “proves” a narrative of inferiority based entirely on subjective choices about what matters.
+            </p>
+            <p>
+                Keep in mind that this data is randomly generated, but the exercise demonstrates how easily statistical tools can create narratives that reinforce preconceived beliefs.
+            </p>
+            <iframe src="http://127.0.0.1:8050/" title="Eugenicist Visualization" width="100%" height="600px"></iframe>
+        </section>
 
-    <section id="biased-dataset">
-        <h2>Biased Dataset - Emphasizing 'IQ scores' and 'Moral character score'</h2>
-        <iframe src="biased_data_plot.html" style="width: 100%; height: 500px;"></iframe>
-        <p>
-            In the biased dataset, we see that the IQ scores for Country A and Country C dominate the other variables, skewing the analysis in favor of these countries. This shows how statistical methods can be manipulated to support subjective judgments by prioritizing specific variables. In a world where these values are seen as the most important indicators of a country's worth, Country A and Country C would be celebrated, while other countries could be marginalized.
-        </p>
-    </section>
+        <!-- Modern Visualization -->
+        <section id="modern-visualization">
+            <p>
+                While the overtly biased metrics of Fisher's time have faded, the mechanisms remain. Today, variables like educational attainment, health outcomes, and income disparity are used to measure societal progress. These metrics may seem impartial, but they are often laden with the values of those who define them.
+            </p>
+            <p>
+                This visualization invites you to engage with modern variables that are often used in discussions of equity and progress. Here’s how you can explore:
+            </p>
+            <ul>
+                <li>
+                    Click on the variable names at the top of the visualization to include or exclude them from the analysis. Think about which variables are prioritized in contemporary narratives of "success."
+                </li>
+                <li>
+                    Adjust the sliders to assign weights to each variable. Observe how changing these weights shifts the bar chart and alters the perceived rankings of groups.
+                </li>
+                <li>
+                    Reflect on the narratives created by your adjustments. Which groups appear to "succeed" under certain weightings? Which are marginalized? How does this depend on the values embedded in the variables?
+                </li>
+            </ul>
+            <p>
+                This data is also randomly generated, but it highlights the enduring power of statistical tools to shape narratives. Whether through Fisher’s eugenicist lens or today’s metrics of progress, the ability to assign weights reveals the subjective nature of these tools.
+            </p>
+            <iframe src="http://127.0.0.1:8051/" title="Modern Visualization" width="100%" height="600px"></iframe>
+        </section>
 
-    <section id="unbiased-dataset">
-        <h2>Unbiased Dataset - Random Scores</h2>
-        <iframe src="unbiased_data_plot.html" style="width: 100%; height: 500px;"></iframe>
-        <p>
-            The unbiased dataset presents a more balanced view, with all countries performing similarly across a range of variables. No single country or variable dominates, which allows for a more objective interpretation of the data. The p-values in this case are much higher, indicating that any differences between countries are likely due to random chance rather than actual significant differences. This demonstrates how unbiased data produces results that don’t lead to the overemphasis of certain traits over others.
-        </p>
-    </section>
-
-    <section id="anova-results">
-        <h2>ANOVA Results Comparison</h2>
-        <h3>Biased Dataset:</h3>
-        <ul>
-            <li><strong>IQ scores:</strong> F-statistic = 45.05, p-value ≈ 2.87e-32</li>
-            <li><strong>Violent crime per 100 people:</strong> F-statistic = 11.73, p-value ≈ 4.14e-09</li>
-            <li><strong>Economic output:</strong> F-statistic = 146.65, p-value ≈ 1.30e-82</li>
-            <li><strong>Moral character score:</strong> F-statistic = 194.60, p-value ≈ 4.17e-100</li>
-            <li><strong>Reproduction rates:</strong> F-statistic = 63.98, p-value ≈ 1.37e-43</li>
-        </ul>
-
-        <h3>Unbiased Dataset:</h3>
-        <ul>
-            <li><strong>IQ scores:</strong> F-statistic = 0.900, p-value = 0.464</li>
-            <li><strong>Violent crime per 100 people:</strong> F-statistic = 0.917, p-value = 0.454</li>
-            <li><strong>Economic output:</strong> F-statistic = 0.538, p-value = 0.708</li>
-            <li><strong>Moral character score:</strong> F-statistic = 0.940, p-value = 0.441</li>
-            <li><strong>Reproduction rates:</strong> F-statistic = 1.507, p-value = 0.199</li>
-        </ul>
-
-        <p>
-            The results from the biased dataset show much lower p-values, which might lead someone to believe that the differences between countries are significant. However, these differences arise from biased weighting of certain variables. In contrast, the unbiased dataset has much higher p-values, indicating that the differences observed are likely due to random variation and not significant.
-        </p>
-        <p>
-            These statistical techniques—when presented without context—can easily mislead people into accepting flawed or biased conclusions. By emphasizing certain variables over others, researchers can manipulate F-statistics and p-values to make results seem more significant than they truly are. It's crucial to critically assess the assumptions, data collection methods, and variable weighting behind any statistical analysis.
-        </p>
-    </section>
+        <!-- Conclusion -->
+        <section id="conclusion">
+            <p>
+                These exercises reveal how statistical tools, designed to understand the world, can easily divide it. From Fisher’s justification of resource allocation to today’s efforts to measure societal progress, the ability to assign weights and create hierarchies reflects subjective values rather than objective truths.
+            </p>
+            <p>
+                Fisher’s methods reveal the inherent subjectivity of statistical tools. By assigning weights and defining variables, these tools do more than describe reality—they prescribe values and impose hierarchies. Whether justifying resource allocation in Fisher’s era or defining societal progress today, statistical frameworks reflect the biases of those who create them. They are not neutral; when applied to human populations, they become instruments of exclusion.
+            </p>
+            <p>
+          <p>
+            The persistence of IQ as a central metric exemplifies this issue. While IQ measures something quantifiable, it remains deeply entwined with assumptions about intelligence and human worth. Fisher’s belief in its importance, like his focus on other traits, was shaped by a worldview that sought to categorize and control. Even today, IQ’s prominence in debates about education, employment, and societal potential reflects these enduring biases        
+         </p>
+         <p>
+            <p>
+                As we turn to IQ in the next section, we confront its role as a "constant variable" across decades of data analysis. By examining how it has been used to define human potential and societal value, we can better understand the subjective choices that continue to shape modern metrics. <a href="the_constant_variable.html">Continue reading: The Constant Variable</a>
+            <p> 
+              
+        </section>
+    </div>
 
     <footer>
         <p>&copy; 2024 Colin Geraghty. All rights reserved.</p>
     </footer>
-
 </body>
 </html>

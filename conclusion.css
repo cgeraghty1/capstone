@@ -1,47 +1,61 @@
-/* General page layout */
+/* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Avenir', sans-serif;
+    color: rgba(0, 31, 63, 0.85);
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
+    font-size: 17px;
 }
 
-.header-container {
-    background-color: rgba(0, 31, 63, 0.9); /* Soft navy */
-    padding: 20px;
-    color: white;
+/* Header Styling */
+header {
     text-align: center;
+    padding: 20px;
+    color: rgba(0, 31, 63, 0.9);
+    background: linear-gradient(to right, #f1f1f1, #dfe6e9);
 }
 
 h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
+    margin: 20px 0;
 }
 
 .subtitle {
     font-size: 1.2em;
+    color: rgba(0, 31, 63, 0.7);
     margin-top: 0;
 }
 
-#conclusion {
-    text-align: center;
-    margin: 40px auto;
+/* Content Wrapper */
+.content-wrapper {
     max-width: 900px;
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: rgba(0, 31, 63, 0.8); /* Soft navy */
+    margin: 40px auto;
     padding: 20px;
+    text-align: justify;
 }
 
-#conclusion p {
+/* Paragraph Styling */
+p {
+    font-size: 17px;
+    color: rgba(0, 31, 63, 0.85);
     margin-bottom: 20px;
+    line-height: 1.8;
 }
 
+/* Footer Styling */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #001f3f;
-    color: white;
-    margin-top: 40px;
+    padding: 20px;
+    background-color: #eaeaea;
+    color: rgba(0, 31, 63, 0.8);
+    font-size: 0.9em;
+    border-top: 1px solid #ccc;
 }
+
+footer p {
+    margin: 0;
+}
+
+

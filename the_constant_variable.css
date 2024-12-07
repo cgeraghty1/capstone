@@ -1,4 +1,4 @@
-/* General body styling */
+/* General Body Styling */
 body {
     font-family: 'Avenir', sans-serif;
     color: rgba(0, 31, 63, 0.85);
@@ -21,13 +21,6 @@ h1 {
     margin: 0; /* Controls spacing outside the header */
     font-weight: 400; /* Header font weight (thickness) */
 }
-p {
-    margin: 0 0 15px 0; /* Controls spacing between paragraphs */
-    padding: 0; /* Removes padding inside the paragraph */
-    line-height: 1.8; /* Controls the vertical spacing between lines of text */
-    font-size: 17px; /* Font size for paragraph text */
-    color: rgba(0, 31, 63, 0.85); /* Text color */
-}
 
 .subtitle {
     font-size: 1.3em;
@@ -43,25 +36,15 @@ p {
     text-align: justify;
 }
 
-/* Blockquote Styling */
-blockquote {
-    font-size: 1.2em;
-    font-style: italic;
-    margin: 30px auto;
-    padding: 10px 20px;
-    border-left: 4px solid #001f3f;
-    color: rgba(0, 31, 63, 0.85);
-}
-
 /* Section Styling */
 section {
     margin-bottom: 40px;
 }
 
 section h2 {
-    font-size: 1.8em;
-    color: rgba(0, 31, 63, 0.85);
-    margin-bottom: 15px;
+    font-size: 1.5em; /* Header font size */
+    margin: 0; /* Controls spacing outside the header */
+    font-weight: 400; /* Header font weight (thickness) */
 }
 
 section p {
@@ -70,10 +53,38 @@ section p {
     margin-bottom: 20px;
     line-height: 1.6;
 }
+p {
+    margin: 0 0 15px 0; /* Controls spacing between paragraphs */
+    padding: 0; /* Removes padding inside the paragraph */
+    line-height: 1.8; /* Controls the vertical spacing between lines of text */
+    font-size: 17px; /* Font size for paragraph text */
+    color: rgba(0, 31, 63, 0.85); /* Text color */
+}
 
-/* Tableau Container Styling */
-#tableauViz1, #tableauViz2 {
-    margin: 20px 0;
+/* Sankey Diagram Styling */
+#sankey-container {
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#sankey-container svg {
+    max-width: 100%;
+}
+
+.node text {
+    font-family: 'Avenir', sans-serif;
+    fill: #000;
+}
+
+.node rect {
+    cursor: pointer;
+    stroke-width: 1px;
+}
+
+.link {
+    fill: none;
+    stroke-opacity: 0.5;
 }
 
 /* Footer Styling */
@@ -88,5 +99,3 @@ footer {
 footer p {
     margin: 0;
 }
-
-

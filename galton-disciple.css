@@ -1,56 +1,67 @@
 /* General body styling */
 body {
     font-family: 'Avenir', sans-serif;
-    color: rgba(0, 31, 63, 0.85); /* Matches previous style */
+    color: rgba(0, 31, 63, 0.85);
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    font-size: 17px;
 }
 
-/* Header Styling */
 header {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px 20px 20px; /* Controls the spacing inside the header */
+    color: #001f3f; /* Header text color */
+    background-color: transparent; /* Header background color */
 }
 
 h1 {
-    font-size: 2.5em;
-    color: rgba(0, 31, 63, 0.9);
-    margin: 20px 0;
+    font-size: 2.5em; /* Header font size */
+    margin: 0; /* Controls spacing outside the header */
+    font-weight: 400; /* Header font weight (thickness) */
 }
 
-/* Section Styling */
-section {
-    max-width: 800px;
+/* Content Wrapper */
+.content-wrapper {
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     text-align: justify;
 }
 
-section h2 {
-    font-size: 1.8em;
-    color: rgba(0, 31, 63, 0.85);
-    margin-bottom: 15px;
+p {
+    margin: 0 0 15px 0; /* Controls spacing between paragraphs */
+    padding: 0; /* Removes padding inside the paragraph */
+    line-height: 1.8; /* Controls the vertical spacing between lines of text */
+    font-size: 17px; /* Font size for paragraph text */
+    color: rgba(0, 31, 63, 0.85); /* Text color */
 }
 
-section p {
-    font-size: 1.1em;
-    color: rgba(0, 31, 63, 0.85);
-    margin-bottom: 20px;
-    line-height: 1.6;
+/* Radar Chart Container */
+.radar-chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto; /* Centers the chart and adds spacing */
 }
 
-/* PDF Embed Section */
-.pdf-container {
+/* Radar Chart Image */
+.radar-chart-image {
+    max-width: 100%;
+    width: 80%; /* Adjust to double the previous size */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Caption */
+.image-caption {
+    font-size: 1em;
+    color: rgba(0, 31, 63, 0.7);
+    margin-top: 15px;
     text-align: center;
-    margin: 30px auto;
-}
-
-.pdf-container object {
-    width: 100%;
-    max-width: 600px; /* Ensure responsive width */
-    height: 400px;
 }
 
 /* Footer Styling */
@@ -60,8 +71,4 @@ footer {
     background-color: #f1f1f1;
     color: rgba(0, 31, 63, 0.8);
     font-size: 0.9em;
-}
-
-footer p {
-    margin: 0;
 }
