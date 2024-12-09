@@ -6,7 +6,7 @@ const lineData = [
     { label: 'Family 72: A Case Study', url: 'family-72.html', xPos: 450, length: 420, textOffsetY: -15 },
     { label: 'Pearson\'s Legacy', url: 'galton-disciple.html', xPos: 550, length: 420, textOffsetY: 5 },
     { label: 'Fisher\'s Controversies', url: 'fisher.html', xPos: 630, length: 330 },
-    { label: 'The Persistent Variable', url: 'the_constant_varible.html', xPos: 725, length: 240 },
+    { label: 'The Persistent Variable', url: 'the_constant_variable.html', xPos: 725, length: 240 },
     { label: 'Modern Metrics', url: 'world-happiness-report.html', xPos: 850, length: 150 }
 ];
 
