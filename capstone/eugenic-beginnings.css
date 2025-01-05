@@ -1,0 +1,97 @@
+p {
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove all padding */
+    line-height: 1.8; /* Keep readability */
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* General Body Styling */
+body {
+    font-family: 'Avenir', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(0, 31, 63, 0.85);
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    color: #001f3f;
+    background-color: transparent;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Content Section */
+.content-section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+/* Paragraph Styling */
+.content-section p {
+    margin-bottom: 15px; /* Ensures consistent spacing between paragraphs */
+    line-height: 1.8; /* Maintains good readability */
+}
+
+/* Image Styling */
+.image-centered {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.eugenics-tree-image,
+.kantsaywhere-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #001f3f;
+    border-radius: 5px;
+    margin: 20px auto;
+    display: block;
+}
+
+.image-caption {
+    font-size: 0.9em;
+    color: rgba(0, 31, 63, 0.7);
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #f1f1f1;
+    color: rgba(0, 31, 63, 0.8);
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Link Styling */
+a {
+    color: rgba(0, 31, 63, 0.85);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1e90ff;
+}
