@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quantified Lives: Data, Bias, and the Cost of Categorization</title>
+    <link rel="stylesheet" href="landing_page.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+    <h1>Quantified Lives: Data, Bias, and the Cost of Categorization</h1>
+</header>
+
+<div class="curve-container">
+    <svg viewBox="0 0 1000 500" id="bell-curve-svg">
+        <path id="bell-curve" d="M 100 450 Q 500 80 900 450" fill="none" stroke="red" stroke-opacity="0.4" stroke-width="2" />
+        <g id="line-group"></g>
+    </svg>
+
+    <!-- Introduction and Conclusion Links -->
+    <a href="introduction.html" class="intro-link">Introduction</a>
+    <a href="conclusion.html" class="conclusion-link">Conclusion</a>
+</div>
+
+<script>
+    // Data for each line with labels and target URLs
+    const lineData = [
+        { label: 'Origins of Data Bias', url: 'eugenic-beginnings.html', xPos: 150, length: 150 },
+        { label: 'Magnetic Missteps', url: 'magnetic-regression.html', xPos: 275, length: 240 },
+        { label: 'Hidden Outliers', url: 'outliers.html', xPos: 370, length: 330 },
+        { label: 'Family 72: A Case Study', url: 'family-72.html', xPos: 450, length: 420, textOffsetY: -15 },
+        { label: 'Pearson\'s Legacy', url: 'galton-disciple.html', xPos: 550, length: 420, textOffsetY: 5 },
+        { label: 'Fisher\'s Controversies', url: 'fisher.html', xPos: 630, length: 330 },
+        { label: 'Happy?', url: 'world-happiness-report.html', xPos: 725, length: 240 },
+        { label: 'The Persistent Variable', url: 'the_constant_variable.html', xPos: 850, length: 150 }
+    ];
+
+    // SVG element and bell curve path
+    const svg = document.getElementById("bell-curve-svg");
+    const bellCurvePath = document.getElementById("bell-curve");
+
+    function addLines() {
+        const lineGroup = document.getElementById("line-group");
+
+        lineData.forEach((line) => {
+            const pointOnCurve = bellCurvePath.getPointAtLength(bellCurvePath.getTotalLength() * (line.xPos - 100) / 800);
+            const lineHeight = line.length / 2;
+            const y1 = pointOnCurve.y - lineHeight;
+            const y2 = pointOnCurve.y + lineHeight;
+
+            // Create the line
+            const svgLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            svgLine.setAttribute("x1", line.xPos);
+            svgLine.setAttribute("y1", y1);
+            svgLine.setAttribute("x2", line.xPos);
+            svgLine.setAttribute("y2", y2);
+            svgLine.setAttribute("class", "line");
+            lineGroup.appendChild(svgLine);
+
+            // Create the text label (link)
+            const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            text.setAttribute("x", line.xPos);
+            const textOffsetY = line.textOffsetY || 0;
+            text.setAttribute("y", y1 - 10 + textOffsetY);
+            text.setAttribute("class", "line-text");
+            text.textContent = line.label;
+            text.addEventListener('click', () => window.location.href = line.url);
+            lineGroup.appendChild(text);
+        });
+    }
+
+    // Initialize the lines and labels
+    addLines();
+</script>
+
+</body>
+</html>
