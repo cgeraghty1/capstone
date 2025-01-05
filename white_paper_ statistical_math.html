@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistical Methods Supplement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 1rem;
+        }
+        h2 {
+            color: #333;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mathematical Equations and Examples</h1>
+
+    <h2>1. Regression to the Mean (Francis Galton)</h2>
+    <p>Regression to the mean measures the tendency of data points to gravitate toward the average. This principle was formalized by Galton to study hereditary traits.</p>
+    <p>Regression equation:</p>
+    <pre><code>y = β₀ + β₁x + ϵ</code></pre>
+    <p>Where:</p>
+    <ul>
+        <li><code>y</code>: Dependent variable (e.g., offspring’s trait)</li>
+        <li><code>x</code>: Independent variable (e.g., parent’s trait)</li>
+        <li><code>β₀</code>: Intercept (baseline value when <code>x</code> is 0)</li>
+        <li><code>β₁</code>: Slope (rate of change of <code>y</code> with respect to <code>x</code>)</li>
+        <li><code>ϵ</code>: Error term (captures variation not explained by the model)</li>
+    </ul>
+    <p>Example of Categorization and Subjective Weights:</p>
+    <pre><code>
+Categorized Groups:
+  Group A: High parental education (x₁ = 90), high income (x₂ = 80)
+  Group B: Moderate parental education (x₁ = 60), moderate income (x₂ = 50)
+  Group C: Low parental education (x₁ = 30), low income (x₂ = 20)
+
+Regression Model with Subjective Weights:
+  y = β₀ + β₁(x₁) + β₂(x₂) + ϵ
+  Weights: β₁ = 0.6, β₂ = 0.4
+
+Predictions:
+  Group A: y = β₀ + (0.6 × 90) + (0.4 × 80)
+           y = β₀ + 54 + 32 = β₀ + 86
+  Group B: y = β₀ + (0.6 × 60) + (0.4 × 50)
+           y = β₀ + 36 + 20 = β₀ + 56
+  Group C: y = β₀ + (0.6 × 30) + (0.4 × 20)
+           y = β₀ + 18 + 8 = β₀ + 26
+
+This demonstrates how subjective weights (e.g., prioritizing education over income) can drastically alter predicted outcomes, reinforcing pre-existing biases.
+    </code></pre>
+
+    <h2>2. Correlation Coefficient (Karl Pearson)</h2>
+    <p>The correlation coefficient quantifies the strength and direction of a linear relationship between two variables.</p>
+    <p>Formula:</p>
+    <pre><code>r = Cov(X, Y) / (σₓ × σᵧ)</code></pre>
+    <p>Where:</p>
+    <ul>
+        <li><code>r</code>: Correlation coefficient (ranges from -1 to 1)</li>
+        <li><code>Cov(X, Y)</code>: Covariance between variables X and Y</li>
+        <li><code>σₓ</code>, <code>σᵧ</code>: Standard deviations of X and Y</li>
+    </ul>
+    <p>Example of Categorization and Subjective Weights:</p>
+    <pre><code>
+Variables:
+  X = Productivity (high, moderate, low)
+  Y = Societal worth (subjective score)
+
+Subjective Weights:
+  Group A: High productivity (X = 90), high societal worth (Y = 85)
+  Group B: Moderate productivity (X = 70), moderate societal worth (Y = 65)
+  Group C: Low productivity (X = 40), low societal worth (Y = 30)
+
+Covariance Calculation:
+  Cov(X, Y) = Σ((Xᵢ - MeanX) * (Yᵢ - MeanY)) / (n - 1)
+  MeanX = (90 + 70 + 40) / 3 = 66.67
+  MeanY = (85 + 65 + 30) / 3 = 60
+  Cov(X, Y) = ((90-66.67)*(85-60) + (70-66.67)*(65-60) + (40-66.67)*(30-60)) / 2
+             ≈ (600 + 13.33 + 800) / 2
+             ≈ 1413.33 / 2
+             ≈ 706.67
+
+Correlation Coefficient:
+  r = Cov(X, Y) / (σₓ × σᵧ)
+  Assume σₓ = 20, σᵧ = 25
+  r = 706.67 / (20 × 25)
+  r ≈ 1.41
+
+This subjective weighting skews the correlation to overemphasize productivity’s role in societal worth.
+    </code></pre>
+
+    <h2>3. Analysis of Variance (ANOVA) (Ronald Fisher)</h2>
+    <p>ANOVA compares means across multiple groups to determine if observed differences are statistically significant.</p>
+    <p>Formula:</p>
+    <pre><code>F = (SSB / (k - 1)) / (SSW / (N - k))</code></pre>
+    <p>Where:</p>
+    <ul>
+        <li><code>F</code>: F-statistic</li>
+        <li><code>SSB</code>: Sum of squares between groups (variance explained by group differences)</li>
+        <li><code>SSW</code>: Sum of squares within groups (variance within each group)</li>
+        <li><code>k</code>: Number of groups</li>
+        <li><code>N</code>: Total number of observations</li>
+    </ul>
+    <p>Example of Categorization and Subjective Weights:</p>
+    <pre><code>
+Groups:
+  Group A: Productivity = 90, Education = 85
+  Group B: Productivity = 70, Education = 65
+  Group C: Productivity = 40, Education = 45
+
+Weights:
+  Productivity weight = 0.6
+  Education weight = 0.4
+
+Weighted Scores:
+  Group A: R = (0.6 × 90) + (0.4 × 85) = 54 + 34 = 88
+  Group B: R = (0.6 × 70) + (0.4 × 65) = 42 + 26 = 68
+  Group C: R = (0.6 × 40) + (0.4 × 45) = 24 + 18 = 42
+
+SSB Calculation:
+  Overall Mean = (88 + 68 + 42) / 3 = 66
+  SSB = Σ(GroupSize × (GroupMean - OverallMean)²)
+      = (1 × (88 - 66)²) + (1 × (68 - 66)²) + (1 × (42 - 66)²)
+      = 484 + 4 + 576 = 1064
+
+This demonstrates how subjective weights influence group rankings and justifications for resource allocation.
+    </code></pre>
+
+    <h2>4. AI and the Risk of Amplified Divisions</h2>
+    <p>As artificial intelligence becomes more integral to decision-making, the ethical implications of how these systems are trained cannot be overstated. AI systems are often hailed as neutral tools capable of analyzing vast amounts of data without human bias. However, these models are only as objective as the data they are trained on and the priorities encoded by their creators.</p>
+    <p>Example of a Social Media Feedback Loop:</p>
+    <pre><code>Engagement_Score = β₀ + β₁(Clicks) + β₂(Shares) + β₃(Watch_Time) + ε</code></pre>
+    <p>Suppose an AI model assigns weights to engagement variables:</p>
+    <ul>
+        <li>Clicks (β₁): 0.4</li>
+        <li>Shares (β₂): 0.3</li>
+        <li>Watch Time (β₃): 0.3</li>
+    </ul>
+    <p>Calculations:</p>
+    <pre><code>
+Sensational Post:
+  Clicks = 100, Shares = 50, Watch Time = 60
+  Engagement_Score = (0.4 × 100) + (0.3 × 50) + (0.3 × 60)
+                  = 40 + 15 + 18 = 73
+
+Balanced Post:
+  Clicks = 70, Shares = 30, Watch Time = 40
+  Engagement_Score = (0.4 × 70) + (0.3 × 30) + (0.3 × 40)
+                  = 28 + 9 + 12 = 49
+    </code></pre>
+    <p>This feedback loop prioritizes sensational content, amplifying biases and deepening divisions.</p>
+    <p><strong>Implications:</strong></p>
+    <ul>
+        <li><strong>Bias Amplification:</strong> Embedding subjective values perpetuates biases.</li>
+        <li><strong>Exacerbating Divisions:</strong> Feedback loops polarize societies.</li>
+        <li><strong>The Illusion of Objectivity:</strong> Users may trust AI without recognizing the biases in its training.</li>
+    </ul>
+</body>
+</html>

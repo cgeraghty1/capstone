@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Happiness Report: EU Case Study</title>
+    <link rel="stylesheet" href="world-happiness-report.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>World Happiness Report</h1>
+    <p class="subtitle">EU Case Study: The Influence of Subjective Measures</p>
+</header>
+
+<div class="content-wrapper">
+    <section id="content">
+        <p>
+            The evolution of statistical tools has long shaped our understanding of human value, from Fisher’s categorization of populations to the enduring dominance of IQ. These methodologies, while presented as objective, often reflect the philosophical biases of their creators. Today, this legacy continues in the World Happiness Report, where the ostensibly noble goal of measuring well-being conceals subjective judgments about what constitutes happiness.
+        </p>
+        <p>
+            The World Happiness Report assigns significant weight to variables like social support (31.71%) and positive affect (28.68%), which together contribute over 60% of a nation’s happiness score. Social support, for instance, is assessed using a single survey question: “If you were in trouble, do you have relatives or friends you can count on to help you whenever you need them?” In contrast, GDP per capita contributes just 4.51%, and healthy life expectancy accounts for only 0.34%. These weightings emphasize emotional and social well-being over material wealth and longevity. However, this perspective may not resonate universally. For individuals in low-GDP countries, economic stability and access to healthcare may feel more pressing than abstract measures of emotional support.
+        </p>
+
+        <p>
+            Below, an interactive visualization focuses on data from European Union nations, consistently ranked as some of the happiest countries in the World Happiness Report. The left panel shows the weights assigned to each variable; the right panel displays the resulting country rankings. This serves as a case study to examine the report’s underlying assumptions. Do these weightings align with your perception of happiness in Europe, or do they obscure alternative understandings of well-being?
+        </p>
+
+        <div id="tableauViz1"></div>
+
+        <p>
+            To explore the complexity of happiness, consider an ostensibly objective measure: suicide rates. Finland, which ranks among the happiest nations, reports one of the highest suicide rates in the EU (15.3 per 100,000 people), well above the European average of 11. By contrast, Mediterranean countries like Cyprus and Greece, often lower in happiness rankings, report some of the lowest suicide rates. If we remove subjective variables and rely solely on objective data, such as suicide rates, an argument emerges that greater exposure to sunlight may provide a more tangible explanation for happiness. This contrast challenges the methodology of the World Happiness Report, revealing the limitations of survey-based metrics in capturing the true complexity of human well-being.
+        </p>
+
+        <div id="tableauViz2"></div>
+
+        <p>
+            The reliance on subjective weightings in the World Happiness Report reflects broader trends in how statistical tools are applied to measure human well-being. Just as IQ once shaped narratives of human worth, happiness rankings create a vision of well-being rooted in the assumptions of their creators. These rankings influence global perceptions, shaping policy and societal priorities in ways that deserve closer scrutiny.
+        </p>
+        <h2>From Happiness to Intelligence</h2>
+        <p>
+            While the variables used to measure happiness reflect contemporary priorities, IQ remains an enduring constant—a metric that has shaped societal narratives about intelligence and human potential for over a century. As we examine IQ’s persistence, it becomes clear that its role in shaping perceptions of worth and ability raises significant questions about the frameworks we choose to adopt and the values they encode.
+        </p>
+        <p>
+            Artificial intelligence offers an opportunity to rethink these entrenched models. By moving beyond the biases embedded in traditional metrics, AI has the potential to prioritize individuality over categorization. However, this potential depends entirely on how we design and train these systems today.
+        </p>
+        <p>
+            <a href="the_constant_variable.html" class="next-link">Continue to The Constant Variable: IQ and AI</a>
+        </p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Colin Geraghty. All rights reserved.</p>
+</footer>
+
+<script>
+    // First Tableau Visualization
+    const viz1Container = document.getElementById("tableauViz1");
+    const viz1Url = "https://public.tableau.com/views/EUHasitis/Dashboard2"; // Replace with actual Tableau URL
+    const viz1Options = {
+        hideTabs: true,
+        width: "100%",
+        height: "600px"
+    };
+    const viz1 = new tableau.Viz(viz1Container, viz1Url, viz1Options);
+
+    // Second Tableau Visualization
+    const viz2Container = document.getElementById("tableauViz2");
+    const viz2Url = "https://public.tableau.com/views/EUS_17272910513640/Dashboard3"; // Replace with actual Tableau URL
+    const viz2Options = {
+        hideTabs: true,
+        width: "100%",
+        height: "600px"
+    };
+    const viz2 = new tableau.Viz(viz2Container, viz2Url, viz2Options);
+</script>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,6 @@
+FROM python:3.9-slim
+WORKDIR /app
+COPY . /app
+RUN pip install --no-cache-dir dash pandas plotly
+EXPOSE 8080
+CMD ["python", "modern_statistical_app.py"]
