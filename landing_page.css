@@ -36,6 +36,7 @@ svg {
     height: auto;
     max-width: 1000px; /* Prevents scaling issues */
     max-height: 500px; /* Ensures aspect ratio is respected */
+    will-change: transform;
 }
 
 
@@ -69,4 +70,10 @@ svg {
 .conclusion-link {
     right: 8px;
     bottom: 30px;
+}
+#bell-curve {
+    stroke: red;
+    stroke-opacity: 0.4; /* Ensure this is applied correctly */
+    stroke-width: 2;
+    fill: none;
 }

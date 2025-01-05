@@ -1,0 +1,81 @@
+/* General page layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    background-color: rgba(0, 31, 63, 0.9); /* Soft navy */
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+#introduction {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: rgba(0, 31, 63, 0.8); /* Soft navy */
+}
+
+#line-graph {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+#line-graph h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: rgba(0, 31, 63, 0.9); /* Soft navy */
+}
+
+#analysis {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: rgba(0, 31, 63, 0.8); /* Soft navy */
+}
+
+/* Styling for the graph */
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #333; /* Dark gray for the axis lines */
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-size: 12px;
+    fill: #333;
+}
+
+/* Legend */
+.legend rect {
+    stroke-width: 2;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #001f3f;
+    color: white;
+    margin-top: 40px;
+}
