@@ -1,0 +1,59 @@
+/* General body styling */
+body {
+    font-family: 'Avenir', sans-serif;
+    color: #001f3f;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fefdfb;
+    font-size: 17px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    color: #001f3f;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+}
+
+section p {
+    font-size: 1.1em;
+    color: #001f3f;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    color: #001f3f;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+a:hover {
+    color: #1e90ff;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+            max-width: 1000px;
+            border: 1px solid #ccc;
+        }
+
+        path {
+            stroke: red;
+            stroke-opacity: 0.4;
+            stroke-width: 2;
+            fill: none;
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 1000 500" id="test-svg">
+        <path d="M 100 450 Q 500 80 900 450" />
+    </svg>
+</body>
+</html>

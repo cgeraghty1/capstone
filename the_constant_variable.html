@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Constant Variable: IQ</title>
+    <link rel="stylesheet" href="the_constant_variable.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>The Constant Variable: IQ</h1>
+    <p class="subtitle">A Critical Examination of IQ in Statistical Analysis</p>
+</header>
+
+<div class="content-wrapper">
+    <section id="content">
+        <p>
+            Across decades, the variables used to categorize human populations have evolved, reflecting shifting societal priorities. Early 20th-century measures focused on race, cranial measurements, and so-called "feeblemindedness." By mid-century, metrics like educational tracking and BMI gained prominence. Today, variables like equity indexes and happiness scores dominate the conversation. Yet one variable has persisted through it all: IQ. This enduring focus on IQ is not accidental but a reflection of its perceived objectivity, despite its historical and philosophical roots in systems of hierarchy and exclusion.
+        </p>
+        <p>
+            The Sankey diagram below visualizes the persistence of IQ alongside the evolution of other metrics. While race and cranial measurements have faded, IQ remains a constant. This raises critical questions: Why has IQ endured? What does its continued use reveal about our resistance to rethinking entrenched frameworks? And how can we move beyond it in an era defined by AI?
+        </p>
+        <p>
+            If we continue to consider IQ as a collective measure applied to categorized groups, it will invariably foster division, regardless of intentions. In an era where intelligence exists alongside us in the form of artificial intelligence, it is essential to shift our understanding. Intelligence should no longer be confined to a trait measured and applied to populations but seen as a dynamic, evolving capacity that resists collective application. Persisting with outdated notions risks embedding division and perpetuating inequality under the guise of progress.
+        </p>
+        <p>
+            AI offers an opportunity to break free from these patterns, to prioritize individuality and complexity over reductive categorization. But this potential hinges on deliberate choices. Without scrutiny, AI could become the most powerful tool yet for reinforcing outdated systems of human worth under the guise of technological progress.
+        </p>
+    </section>
+
+    <div id="sankey-container"></div>
+
+    <p>
+        <a href="conclusion.html" class="next-link">Continue reading: Conclusion of this Project</a>
+    </p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Colin Geraghty. All rights reserved.</p>
+</footer>
+
+<script>
+    const margin = { top: 20, right: 10, bottom: 20, left: 100 };
+    const width = 800 - margin.left - margin.right;
+    const height = 500 - margin.top - margin.bottom;
+
+    const svg = d3.select("#sankey-container").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    const data = {
+        nodes: [
+            { name: "1920s" },
+            { name: "1960s" },
+            { name: "2020s" },
+            { name: "Race" },
+            { name: "Cranial Measurements" },
+            { name: "Temperament" },
+            { name: "Feeblemindedness" },
+            { name: "Educational Tracking Systems" },
+            { name: "Body Mass Index (BMI)" },
+            { name: "Criminal Profiling" },
+            { name: "Equity Indexes" },
+            { name: "Happiness Scores" },
+            { name: "IQ" }
+        ],
+        links: [
+            { source: 0, target: 3, value: 1 },
+            { source: 0, target: 4, value: 1 },
+            { source: 0, target: 5, value: 1 },
+            { source: 0, target: 12, value: 1 },
+            { source: 1, target: 6, value: 1 },
+            { source: 1, target: 7, value: 1 },
+            { source: 1, target: 8, value: 1 },
+            { source: 1, target: 12, value: 1 },
+            { source: 2, target: 9, value: 1 },
+            { source: 2, target: 10, value: 1 },
+            { source: 2, target: 11, value: 1 },
+            { source: 2, target: 12, value: 1 }
+        ]
+    };
+
+    const sankey = d3.sankey()
+        .nodeWidth(15)
+        .nodePadding(20)
+        .size([width, height]);
+
+    const sankeyData = sankey({
+        nodes: data.nodes.map(d => Object.assign({}, d)),
+        links: data.links.map(d => Object.assign({}, d))
+    });
+
+    svg.append("g")
+        .selectAll("path")
+        .data(sankeyData.links)
+        .enter().append("path")
+        .attr("d", d3.sankeyLinkHorizontal())
+        .attr("stroke", d => d.target.name === "IQ" ? "#8B0000" : "#B0C4DE")
+        .attr("stroke-width", d => Math.max(1, d.width))
+        .attr("fill", "none")
+        .attr("opacity", 0.5);
+
+    const node = svg.append("g")
+        .selectAll("g")
+        .data(sankeyData.nodes)
+        .enter().append("g");
+
+    node.append("rect")
+        .attr("x", d => d.x0)
+        .attr("y", d => d.y0)
+        .attr("height", d => d.y1 - d.y0)
+        .attr("width", d => d.x1 - d.x0)
+        .attr("fill", d => ["1920s", "1960s", "2020s"].includes(d.name) ? "#4682B4" : (d.name === "IQ" ? "#8B0000" : "#B0C4DE"))
+        .attr("stroke", "#000");
+
+    node.append("text")
+        .attr("x", d => d.x0 - 6)
+        .attr("y", d => (d.y1 + d.y0) / 2)
+        .attr("dy", "0.35em")
+        .attr("text-anchor", "end")
+        .text(d => d.name)
+        .style("font-size", "12px");
+</script>
+
+</body>
+</html>
+
+
