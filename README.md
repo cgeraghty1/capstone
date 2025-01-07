@@ -25,7 +25,7 @@ The digital project is hosted on **GitHub Pages**:
 For those interested in the technical details, the project includes:
 - **Mathematical Examples**: Explore the equations and formulas behind tools like regression analysis and correlation coefficients.
 - **Breakdown of Metrics**: Analyze the subjective weightings in frameworks like the World Happiness Report.  
-View the additional mathematical webpage here: `[Link to Math Appendix]`
+View the additional mathematical webpage here: `white_paper_ statistical_math.html`
 
 ## Technologies Used
 - **HTML/CSS/JavaScript**: For building the digital web pages.
