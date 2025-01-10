@@ -71,11 +71,12 @@ p strong {
 
 /* Footer Styling */
 footer {
-    text-align: center;
-    padding: 25px;
+    position: center;
+    bottom: 0;
+    width: 100%;
     background-color: #f1f1f1;
-    color: rgba(0, 31, 63, 0.8);
-    font-size: 0.9em;
+    color: #001f3f;
+    font-size: 0.3em;
 }
 
 footer p {

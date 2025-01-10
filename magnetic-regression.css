@@ -43,9 +43,9 @@ p {
 /* Footer Styling */
 footer {
     text-align: center;
-    padding: 25px;
+    padding: 20px;
     background-color: #f1f1f1;
-    color: rgba(0, 31, 63, 0.8);
+    color: #001f3f;
     font-size: 0.9em;
 }
 
