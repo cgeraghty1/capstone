@@ -22,6 +22,11 @@ h1 {
     margin: 0; /* Controls spacing outside the header */
     font-weight: 400; /* Header font weight (thickness) */
 }
+h2 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 400;
+}
 
 
 /* Content Wrapper */

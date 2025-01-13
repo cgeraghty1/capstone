@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetic Regression: Mathematical Example</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding-left: 40px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Magnetic Regression: Mathematical Breakdown</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Regression to the Mean (Francis Galton)</h2>
+            <p>
+                Regression to the mean explains how data points tend to move toward the average over time. Francis Galton first used this principle to study hereditary traits.
+            </p>
+            <h3>Regression Equation:</h3>
+            <p>
+                <em>y = β₀ + β₁x + ε</em>
+            </p>
+            <p>
+                Where:<br>
+                <strong>y</strong>: Dependent variable (e.g., offspring’s trait)<br>
+                <strong>x</strong>: Independent variable (e.g., parent’s trait)<br>
+                <strong>β₀</strong>: Intercept (baseline when x = 0)<br>
+                <strong>β₁</strong>: Slope (change rate of y relative to x)<br>
+                <strong>ε</strong>: Error term (random variation)
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Categorization and Subjective Weights</h2>
+            <p>
+                This example shows how subjective weighting of variables influences regression outcomes.
+            </p>
+            <h3>Categorized Groups:</h3>
+            <ul>
+                <li><strong>Group A:</strong> High parental education (x₁ = 90), high income (x₂ = 80)</li>
+                <li><strong>Group B:</strong> Moderate parental education (x₁ = 60), moderate income (x₂ = 50)</li>
+                <li><strong>Group C:</strong> Low parental education (x₁ = 30), low income (x₂ = 20)</li>
+            </ul>
+
+            <h3>Regression Model with Subjective Weights:</h3>
+            <p>
+                <em>y = β₀ + β₁(x₁) + β₂(x₂) + ε</em><br>
+                Weights: <strong>β₁ = 0.6</strong> (education), <strong>β₂ = 0.4</strong> (income)
+            </p>
+
+            <h3>Predicted Outcomes:</h3>
+            <ul>
+                <li><strong>Group A:</strong> y = β₀ + (0.6 × 90) + (0.4 × 80) = β₀ + 54 + 32 = β₀ + 86</li>
+                <li><strong>Group B:</strong> y = β₀ + (0.6 × 60) + (0.4 × 50) = β₀ + 36 + 20 = β₀ + 56</li>
+                <li><strong>Group C:</strong> y = β₀ + (0.6 × 30) + (0.4 × 20) = β₀ + 18 + 8 = β₀ + 26</li>
+            </ul>
+            <p>
+                This example highlights how prioritizing certain variables (like education over income) can skew predictions and reinforce biases.
+            </p>
+        </section>
+
+        <nav>
+            <a href="magnetic-regression.html">&#8592; Back to Magnetic Regression</a>
+        </nav>
+    </main>
+</body>
+</html>

@@ -12,20 +12,22 @@ body {
 header {
     text-align: center;
     padding: 40px 20px 20px 20px; /* Controls the spacing inside the header */
-    color: #001f3f; /* Header text color */
+    color: rgba(0, 31, 63, 0.85) /* Header text color */
     background-color: transparent; /* Header background color */
 }
 
 h1 {
-    font-size: 2.5em; /* Header font size */
-    margin: 0; /* Controls spacing outside the header */
-    font-weight: 400; /* Header font weight (thickness) */
+    font-size: 2.5em; /* Main heading font size */
+    margin: 0;       /* Controls spacing outside the header */
+    font-weight: 400; /* Main heading font weight (thickness) */
+    color: #001f3f;  /* Make sure the main heading has a defined color as well */
 }
+
 p {
     margin: 0 0 15px 0; /* Controls spacing between paragraphs */
-    padding: 0; /* Removes padding inside the paragraph */
-    line-height: 1.8; /* Controls the vertical spacing between lines of text */
-    font-size: 17px; /* Font size for paragraph text */
+    padding: 0;         /* Removes padding inside the paragraph */
+    line-height: 1.8;   /* Controls the vertical spacing between lines of text */
+    font-size: 17px;    /* Font size for paragraph text */
     color: rgba(0, 31, 63, 0.85); /* Text color */
 }
 
@@ -58,9 +60,14 @@ section {
     margin-bottom: 40px;
 }
 
+/* 
+   Subheadings (h2) inherit the same font weight and color as h1 
+   but are slightly smaller in size
+*/
 section h2 {
-    font-size: 1.8em;
-    color: rgba(0, 31, 63, 0.85);
+    font-size: 2em;         /* Slightly smaller than h1 (2.5em) */
+    font-weight: 400;       /* Same font weight as h1 */
+    color: #001f3f;         /* Same color as h1 */
     margin-bottom: 15px;
 }
 

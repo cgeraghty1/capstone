@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis of Variance (ANOVA): Mathematical Breakdown</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding-left: 40px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Analysis of Variance (ANOVA): Mathematical Breakdown</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Analysis of Variance (ANOVA) (Ronald Fisher)</h2>
+            <p>
+                ANOVA compares means across multiple groups to determine if observed differences are statistically significant.
+            </p>
+            <h3>Formula:</h3>
+            <p>
+                <em>F = (SSB / (k - 1)) / (SSW / (N - k))</em>
+            </p>
+            <p>
+                Where:<br>
+                <strong>F</strong>: F-statistic<br>
+                <strong>SSB</strong>: Sum of squares between groups (variance explained by group differences)<br>
+                <strong>SSW</strong>: Sum of squares within groups (variance within each group)<br>
+                <strong>k</strong>: Number of groups<br>
+                <strong>N</strong>: Total number of observations
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Categorization and Subjective Weights</h2>
+            <p>
+                This example illustrates how subjective weighting of variables can affect group comparisons using ANOVA.
+            </p>
+            <h3>Groups:</h3>
+            <ul>
+                <li><strong>Group A:</strong> Productivity = 90, Education = 85</li>
+                <li><strong>Group B:</strong> Productivity = 70, Education = 65</li>
+                <li><strong>Group C:</strong> Productivity = 40, Education = 45</li>
+            </ul>
+
+            <h3>Subjective Weights:</h3>
+            <ul>
+                <li><strong>Productivity weight:</strong> 0.6</li>
+                <li><strong>Education weight:</strong> 0.4</li>
+            </ul>
+
+            <h3>Weighted Scores:</h3>
+            <ul>
+                <li><strong>Group A:</strong> R = (0.6 × 90) + (0.4 × 85) = 54 + 34 = <strong>88</strong></li>
+                <li><strong>Group B:</strong> R = (0.6 × 70) + (0.4 × 65) = 42 + 26 = <strong>68</strong></li>
+                <li><strong>Group C:</strong> R = (0.6 × 40) + (0.4 × 45) = 24 + 18 = <strong>42</strong></li>
+            </ul>
+
+            <h3>SSB Calculation:</h3>
+            <p>
+                <em>Overall Mean = (88 + 68 + 42) / 3 = 66</em><br>
+                <em>SSB = Σ(GroupSize × (GroupMean - OverallMean)²)</em>
+            </p>
+            <p>
+                SSB = (1 × (88 - 66)²) + (1 × (68 - 66)²) + (1 × (42 - 66)²)<br>
+                = 484 + 4 + 576 = <strong>1064</strong>
+            </p>
+            <p>
+                This example demonstrates how subjective weights can influence group rankings and justify resource allocation decisions.
+            </p>
+        </section>
+
+        <nav>
+            <a href="fisher.html">&#8592; Back to Ronald Fisher</a>
+        </nav>
+    </main>
+</body>
+</html>

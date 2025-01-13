@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Behind the World Happiness Report</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding-left: 40px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Math Behind the World Happiness Report (WHR)</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Regression Model Used in the WHR</h2>
+            <p>
+                The World Happiness Report models happiness using a regression equation that includes economic, social, and emotional factors.
+            </p>
+            <h3>Regression Equation:</h3>
+            <p>
+                <em>Happiness_Score = β₀ + β₁(Log GDP) + β₂(Social Support) + β₃(Health) + β₄(Freedom) + β₅(Generosity) + β₆(Corruption) + β₇(Positive Affect) + β₈(Negative Affect) + ε</em>
+            </p>
+            <h3>Regression Coefficients:</h3>
+            <ul>
+                <li><strong>Log GDP per capita:</strong> 0.359</li>
+                <li><strong>Social support:</strong> 2.526</li>
+                <li><strong>Healthy life expectancy:</strong> 0.027</li>
+                <li><strong>Freedom to make life choices:</strong> 1.331</li>
+                <li><strong>Generosity:</strong> 0.537</li>
+                <li><strong>Perceptions of corruption:</strong> -0.716</li>
+                <li><strong>Positive affect:</strong> 2.285</li>
+                <li><strong>Negative affect:</strong> 0.185</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Breaking Down the Percentages</h2>
+            <h3>Total Impact Calculation:</h3>
+            <p>
+                <em>Total Impact = |0.359| + |2.526| + |0.027| + |1.331| + |0.537| + |0.716| + |2.285| + |0.185| = 7.966</em>
+            </p>
+            <h3>Percentage Weights:</h3>
+            <ul>
+                <li><strong>Log GDP per capita:</strong> (0.359 / 7.966) × 100 = <strong>4.51%</strong></li>
+                <li><strong>Social support:</strong> (2.526 / 7.966) × 100 = <strong>31.71%</strong></li>
+                <li><strong>Healthy life expectancy:</strong> (0.027 / 7.966) × 100 = <strong>0.34%</strong></li>
+                <li><strong>Freedom:</strong> (1.331 / 7.966) × 100 = <strong>16.71%</strong></li>
+                <li><strong>Generosity:</strong> (0.537 / 7.966) × 100 = <strong>6.74%</strong></li>
+                <li><strong>Corruption:</strong> (0.716 / 7.966) × 100 = <strong>8.99%</strong></li>
+                <li><strong>Positive affect:</strong> (2.285 / 7.966) × 100 = <strong>28.68%</strong></li>
+                <li><strong>Negative affect:</strong> (0.185 / 7.966) × 100 = <strong>2.32%</strong></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Interpretation of the Results</h2>
+            <p>
+                The breakdown reveals that <strong>Social Support</strong> and <strong>Positive Affect</strong> dominate the model, together accounting for over <strong>60%</strong> of the total weighting.
+            </p>
+            <p>
+                In contrast, <strong>Healthy Life Expectancy</strong>, a crucial factor in well-being, is given a weight of just <strong>0.34%</strong>, suggesting it has minimal influence on the overall happiness score.
+            </p>
+        </section>
+
+        <nav>
+            <a href="world-happiness-report.html">&#8592; Back to World Happiness Report</a>
+        </nav>
+    </main>
+</body>
+</html>
