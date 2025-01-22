@@ -26,6 +26,12 @@ h2 {
     margin: 0;
     font-weight: 400;
 }
+h3 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 400;
+}
+
 
 /* Content Wrapper */
 .content-wrapper {

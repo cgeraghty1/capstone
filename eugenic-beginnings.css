@@ -35,6 +35,23 @@ h1 {
     font-weight: 400;
 }
 
+h2 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 400;
+}
+h4 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 400;
+}
+
 /* Content Section */
 .content-section {
     max-width: 900px;

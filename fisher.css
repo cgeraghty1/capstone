@@ -114,14 +114,6 @@ footer {
 
 footer p {
     margin: 0;
-}
-/* Content Wrapper for Text */
-.content-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 15px;
-    text-align: justify;
-}
 
 /* Blockquote Styling */
 blockquote {

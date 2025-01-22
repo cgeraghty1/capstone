@@ -21,7 +21,11 @@ h1 {
     margin: 0;
     font-weight: 400;
 }
-
+h2 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 200;
+}
 /* Content Wrapper */
 .content-wrapper {
     max-width: 800px;
@@ -46,7 +50,6 @@ section p {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f1f1f1;
     color: #001f3f;
     font-size: 0.9em;
 }
