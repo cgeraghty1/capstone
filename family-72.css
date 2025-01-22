@@ -26,6 +26,18 @@ h2 {
     margin: 0;
     font-weight: 400;
 }
+h2 {
+    font-size: 2em;
+    margin: 0 0 15px 0; /* Add margin for spacing below the heading */
+    font-weight: 400;
+    text-align: left; /* Left-align all H2 headings */
+}
+
+/* Specific Styling for Alan Turing Section H2 */
+#alan-turing h2 {
+    text-align: left; /* Ensures the Alan Turing heading is left-aligned */
+    margin-left: 0; /* Adjust margin for additional fine-tuning if needed */
+}
 
 
 /* Content Wrapper */
