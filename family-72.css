@@ -81,4 +81,34 @@ footer {
 footer p {
     margin: 0;
 }
+.navigation-buttons {
+    text-align: center;
+    margin: 30px 0; /* Adjust spacing around the button container */
+}
 
+/* Style for all buttons */
+.navigation-buttons button,
+.navigation-buttons a button {
+    background-color: transparent; /* Transparent background */
+    color: #001f3f; /* Navy text */
+    border: 2px solid #001f3f; /* Navy border with crisp lines */
+    border-radius: 50%; /* Makes buttons circular */
+    padding: 0; /* Remove default padding */
+    width: 70px; /* Set width for circle */
+    height: 70px; /* Set height for circle */
+    font-size: 16px; /* Adjust font size */
+    font-family: 'Avenir', sans-serif; /* Keep the Avenir font */
+    cursor: pointer;
+    text-align: center; /* Center the text horizontally */
+    line-height: 70px; /* Perfectly vertically center the text */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+    margin: 0 15px; /* Add horizontal spacing between buttons */
+}
+
+/* Hover state for buttons */
+.navigation-buttons button:hover,
+.navigation-buttons a button:hover {
+    background-color: #1e90ff; /* Light blue background on hover */
+    color: white; /* White text on hover */
+    border-color: #1e90ff; /* Change border to match background */
+}

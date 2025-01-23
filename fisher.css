@@ -1,6 +1,6 @@
 /* General body styling */
 body {
-    font-family: 'Avenir', sans-serif;
+    font-family: 'Avenir', Arial, sans-serif; /* Fallback font added */
     color: rgba(0, 31, 63, 0.85);
     line-height: 1.6;
     margin: 0;
@@ -8,6 +8,7 @@ body {
     background-color: #f9f9f9;
     font-size: 17px;
 }
+
 p {
     margin: 0 0 15px 0; /* Controls spacing between paragraphs */
     padding: 0; /* Removes padding inside the paragraph */
@@ -28,6 +29,7 @@ h1 {
     margin: 0; /* Controls spacing outside the header */
     font-weight: 400; /* Header font weight (thickness) */
 }
+
 h2 {
     font-size: 2em;
     margin: 0;
@@ -55,6 +57,7 @@ blockquote {
     margin: 20px auto;
     padding: 10px 20px;
     border-left: 4px solid #001f3f;
+    background-color: #f1f1f1; /* Light background for emphasis */
     color: rgba(0, 31, 63, 0.85);
 }
 
@@ -114,15 +117,36 @@ footer {
 
 footer p {
     margin: 0;
-
-/* Blockquote Styling */
-blockquote {
-    font-size: 1.1em;
-    font-style: italic;
-    margin: 20px auto;
-    padding: 10px 20px;
-    border-left: 4px solid #001f3f;
-    background-color: #f1f1f1; /* Light background for emphasis */
-    color: rgba(0, 31, 63, 0.85);
 }
 
+/* Navigation Buttons */
+.navigation-buttons {
+    text-align: center;
+    margin: 30px 0; /* Adjust spacing around the button container */
+}
+
+.navigation-buttons button,
+.navigation-buttons a button {
+    background-color: transparent; /* Transparent background */
+    color: #001f3f; /* Navy text */
+    border: 2px solid #001f3f; /* Navy border with crisp lines */
+    border-radius: 50%; /* Makes buttons circular */
+    padding: 0; /* Remove default padding */
+    width: 70px; /* Set width for circle */
+    height: 70px; /* Set height for circle */
+    font-size: 16px; /* Adjust font size */
+    font-family: 'Avenir', Arial, sans-serif; /* Keep the Avenir font */
+    cursor: pointer;
+    text-align: center; /* Center the text horizontally */
+    line-height: 70px; /* Perfectly vertically center the text */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+    margin: 0 15px; /* Add horizontal spacing between buttons */
+}
+
+/* Hover state for buttons */
+.navigation-buttons button:hover,
+.navigation-buttons a button:hover {
+    background-color: #1e90ff; /* Light blue background on hover */
+    color: white; /* White text on hover */
+    border-color: #1e90ff; /* Change border to match background */
+}
